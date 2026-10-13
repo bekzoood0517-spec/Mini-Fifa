@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA 26 Mini — реалистичный футбол</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="team team-blue">
+      <span class="dot"></span>
+      <span>СИНИЕ (Вы)</span>
+    </div>
+    <div class="scoreboard">
+      <span id="scoreBlue">0</span>
+      <span class="sep">:</span>
+      <span id="scoreRed">0</span>
+    </div>
+    <div class="team team-red">
+      <span>КРАСНЫЕ</span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="timebar">
+    <div class="time" id="timer">02:00</div>
+    <div class="hint">WASD / ←↑↓→ — движение · ПРОБЕЛ (удерживать) — удар · SHIFT — спринт</div>
+  </div>
+
+  <div class="canvas-box">
+    <canvas id="game" width="960" height="600"></canvas>
+    <div class="overlay show" id="overlay">
+      <h2 id="overlayTitle">⚽ FIFA 26 Mini</h2>
+      <p id="overlayText">Управляй синей командой. Забей больше голов за 2 минуты!</p>
+      <button id="restartBtn" type="button">Начать матч</button>
+    </div>
+  </div>
+
+  <div class="records">
+    <div class="records-head">
+      <h3>🏆 Рекорды (сохраняются локально)</h3>
+      <button id="resetRecords" class="ghost" type="button">Сбросить</button>
+    </div>
+    <div class="rec-grid" id="recordsGrid"></div>
+  </div>
+
+</div>
+<script src="game.js"></script>
+</body>
+</html>
